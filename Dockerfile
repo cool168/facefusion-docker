@@ -1,6 +1,7 @@
 FROM pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime
 WORKDIR /workspace
 ARG FACEFUSION_VERSION=3.1.0
+ENV CUDA_SELECT 0
 ENV GRADIO_SERVER_NAME=0.0.0.0
 ENV PIP_BREAK_SYSTEM_PACKAGES=1
 ENV LD_LIBRARY_PATH=/opt/conda/lib/python3.11/site-packages/nvidia/curand/lib:/opt/conda/lib/python3.11/site-packages/nvidia/cublas/lib:/opt/conda/lib/python3.11/site-packages/nvidia/cufft/lib:/opt/conda/lib/python3.11/site-packages/nvidia/cuda_runtime/lib:/opt/conda/lib/python3.11/site-packages/nvidia/cudnn/lib:/opt/conda/lib/python3.11/site-packages/nvidia/cuda_nvrtc/lib
