@@ -8,4 +8,4 @@ run docker image:.
 docker run -d -it --name facefusion3 -p 7860:7860 --privileged=true --gpus=all facefusion:v310
 
 use facefusion:
-http://X.X.X.X:7860
+http://IP:7860
