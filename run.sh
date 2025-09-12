@@ -4,5 +4,5 @@ export PIP_BREAK_SYSTEM_PACKAGES=1
 
 echo ${DEVICE_SELECT=0}
 
-CUDA_VISIBLE_DEVICES=$DEVICE_SELECT python facefusion.py run
-
+# CUDA_VISIBLE_DEVICES=$DEVICE_SELECT python facefusion.py run
+python facefusion.py run
