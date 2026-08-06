@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.8.1-cudnn-runtime-ubuntu22.04
+FROM nvidia/cuda:12.9.1-cudnn-runtime-ubuntu24.04
 
 ARG FACEFUSION_VERSION=3.8.1
 ENV GRADIO_SERVER_NAME=0.0.0.0
