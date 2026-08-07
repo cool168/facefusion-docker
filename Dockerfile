@@ -21,7 +21,7 @@ RUN pip install onnx==1.22.0
 RUN pip install onnxruntime==1.28.0
 RUN pip install opencv-python-headless==5.0.0.93
 RUN pip install tqdm==4.70.0
-RUN pip install scipy==1.18.0
+RUN pip install scipy
 COPY run.sh /workspace/run.sh
 RUN chmod +x /workspace/run.sh
 ENTRYPOINT ["/workspace/run.sh"]
