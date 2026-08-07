@@ -10,10 +10,11 @@ RUN apt-get update
 RUN apt-get install git -y
 RUN apt-get install curl -y
 RUN apt-get install ffmpeg -y
+RUN apt-get install pip -y
 
 RUN git clone https://github.com/facefusion/facefusion.git --branch ${FACEFUSION_VERSION} --single-branch .
 RUN python install.py cuda@12 --skip-conda
-
+RUN pip install opencv-python-headless==5.0.0.93
 COPY run.sh /workspace/run.sh
 RUN chmod +x /workspace/run.sh
 ENTRYPOINT ["/workspace/run.sh"]
