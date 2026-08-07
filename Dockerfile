@@ -18,7 +18,7 @@ RUN pip install gradio-rangeslider==0.0.8
 RUN pip install gradio==5.50.0
 RUN pip install numpy==2.4.6
 RUN pip install onnx==1.22.0
-RUN pip install onnxruntime==1.28.0
+RUN pip install onnxruntime-gpu
 RUN pip install opencv-python-headless==5.0.0.93
 RUN pip install tqdm==4.70.0
 RUN pip install scipy
