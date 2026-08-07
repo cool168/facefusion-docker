@@ -14,7 +14,14 @@ RUN apt-get install pip -y
 
 RUN git clone https://github.com/facefusion/facefusion.git --branch ${FACEFUSION_VERSION} --single-branch .
 RUN python install.py cuda@12 --skip-conda
+RUN pip gradio-rangeslider==0.0.8
+RUN pip gradio==5.50.0
+RUN pip numpy==2.4.6
+RUN pip onnx==1.22.0
+RUN pip onnxruntime==1.28.0
 RUN pip install opencv-python-headless==5.0.0.93
+RUN pip tqdm==4.70.0
+RUN pip scipy==1.18.0
 COPY run.sh /workspace/run.sh
 RUN chmod +x /workspace/run.sh
 ENTRYPOINT ["/workspace/run.sh"]
