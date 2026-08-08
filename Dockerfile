@@ -13,6 +13,7 @@ RUN apt-get install ffmpeg -y
 
 RUN git clone https://github.com/facefusion/facefusion.git --branch ${FACEFUSION_VERSION} --single-branch .
 RUN python install.py --onnxruntime cuda --skip-conda
+RUN git pull origin master
 
 COPY run.sh /workspace/run.sh
 RUN chmod +x /workspace/run.sh
